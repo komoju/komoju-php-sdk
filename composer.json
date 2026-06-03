@@ -1,0 +1,32 @@
+{
+    "name": "komoju/komoju-sdk",
+    "version": "1.0.0-beta.1",
+    "description": "Full featured access to the KOMOJU payments system.",
+    "keywords": [
+        "komoju",
+        "payment",
+        "japan",
+        "php",
+        "sdk",
+        "api"
+    ],
+    "homepage": "https://github.com/komoju/komoju-php-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KOMOJU Co., Ltd.",
+            "homepage": "https://komoju.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "autoload": {
+        "psr-4": { "Komoju\\" : "lib/" }
+    }
+}
