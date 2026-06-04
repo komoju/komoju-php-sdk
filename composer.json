@@ -1,6 +1,5 @@
 {
     "name": "komoju/komoju-sdk",
-    "version": "1.0.0-beta.1",
     "description": "Full featured access to the KOMOJU payments system.",
     "keywords": [
         "komoju",
