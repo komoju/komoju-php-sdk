@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]*.[0-9]*.[0-9]*'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6.0.2
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@7c071dfe9dc99bdf297fa79cb49ea005b9fcadbc  # v2.37.1, 2026-05-14
+        with:
+          php-version: '8.2'
+          tools: composer:2.9.8
+      - run: composer validate --strict
+      - run: find lib -name "*.php" -print0 | xargs -0 -n1 php -l
+
+  release:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6.0.2
+        with:
+          persist-credentials: false
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          PRERELEASE=""
+          if [[ "$TAG_NAME" == *"beta"* ]] || [[ "$TAG_NAME" == *"alpha"* ]]; then
+            PRERELEASE="--prerelease"
+          fi
+          gh release create "$TAG_NAME" --generate-notes $PRERELEASE
