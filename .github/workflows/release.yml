@@ -36,7 +36,7 @@ jobs:
           TAG_NAME: ${{ github.ref_name }}
         run: |
           PRERELEASE=""
-          if [[ "$TAG_NAME" == *"beta"* ]] || [[ "$TAG_NAME" == *"alpha"* ]]; then
+          if [[ "$TAG_NAME" == *"beta"* ]] || [[ "$TAG_NAME" == *"alpha"* ]] || [[ "$TAG_NAME" == *"rc"* ]]; then
             PRERELEASE="--prerelease"
           fi
           gh release create "$TAG_NAME" --generate-notes $PRERELEASE
