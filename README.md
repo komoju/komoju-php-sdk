@@ -5,7 +5,7 @@ PHP client for the KOMOJU Payments API — Full featured access to the KOMOJU pa
 ## Installation
 
 ```bash
-composer require komoju/komoju-sdk:^1.0.0-beta.1
+composer require komoju-official/komoju-sdk:^1.0.0-beta.1
 ```
 
 Requires PHP 7.4+ and the `curl`, `json`, and `mbstring` extensions.
