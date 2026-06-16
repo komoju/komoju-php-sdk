@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, beta, public-release]
     permissions:
       contents: read
     steps:
@@ -23,7 +23,7 @@ jobs:
 
   release:
     needs: validate
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, beta, public-release]
     permissions:
       contents: write
     steps:
