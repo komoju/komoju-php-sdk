@@ -1,4 +1,4 @@
-# # PaymentDetailsSepaTransfer
+# PaymentDetailsSepaTransfer
 ## Properties
 
 Name | Type | Description | Notes

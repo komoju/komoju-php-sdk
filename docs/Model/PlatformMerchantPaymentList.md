@@ -1,4 +1,4 @@
-# # PlatformMerchantPaymentList
+# PlatformMerchantPaymentList
 ## Properties
 
 Name | Type | Description | Notes

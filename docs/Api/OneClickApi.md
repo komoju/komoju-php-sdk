@@ -16,7 +16,7 @@ All URIs are relative to https://komoju.com/api/v1, except if the operation defi
 ## `deleteExternalCustomer()`
 
 ```php
-deleteExternalCustomer($id): \Komoju\Model\DeleteExternalCustomerResponse
+deleteExternalCustomer($id): \Komoju\Model\DeleteExternalCustomer200Response
 ```
 
 External Customer: Destroy
@@ -33,7 +33,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\OneClickApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -59,7 +58,7 @@ try {
 
 ### Return type
 
-[**\Komoju\Model\DeleteExternalCustomerResponse**](../Model/DeleteExternalCustomerResponse.md)
+[**\Komoju\Model\DeleteExternalCustomer200Response**](../Model/DeleteExternalCustomer200Response.md)
 
 ### Authorization
 

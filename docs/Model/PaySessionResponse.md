@@ -1,4 +1,4 @@
-# # PaySessionResponse
+# PaySessionResponse
 ## Properties
 
 Name | Type | Description | Notes

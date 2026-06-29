@@ -1,4 +1,4 @@
-# # PaymentDetailsRakutenpay
+# PaymentDetailsRakutenpay
 ## Properties
 
 Name | Type | Description | Notes

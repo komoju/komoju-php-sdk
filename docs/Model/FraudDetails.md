@@ -1,4 +1,4 @@
-# # FraudDetails
+# FraudDetails
 ## Properties
 
 Name | Type | Description | Notes

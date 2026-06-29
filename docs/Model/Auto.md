@@ -1,4 +1,4 @@
-# # Auto
+# Auto
 ## Properties
 
 Name | Type | Description | Notes

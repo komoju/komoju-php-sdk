@@ -1,4 +1,4 @@
-# # PaymentDetailsCVS
+# PaymentDetailsCVS
 ## Properties
 
 Name | Type | Description | Notes

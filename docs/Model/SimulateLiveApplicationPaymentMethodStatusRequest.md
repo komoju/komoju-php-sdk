@@ -1,4 +1,4 @@
-# # SimulateLiveApplicationPaymentMethodStatusRequest
+# SimulateLiveApplicationPaymentMethodStatusRequest
 ## Properties
 
 Name | Type | Description | Notes

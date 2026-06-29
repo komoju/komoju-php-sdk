@@ -1,4 +1,4 @@
-# # RefundRequestStatus
+# RefundRequestStatus
 ## Properties
 
 Name | Type | Description | Notes

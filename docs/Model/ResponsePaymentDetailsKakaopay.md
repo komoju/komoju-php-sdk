@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsKakaopay
+# ResponsePaymentDetailsKakaopay
 ## Properties
 
 Name | Type | Description | Notes

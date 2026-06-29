@@ -1,4 +1,4 @@
-# # PaymentMethodInstallmentsInner
+# PaymentMethodInstallmentsInner
 ## Properties
 
 Name | Type | Description | Notes

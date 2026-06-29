@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsEpospay
+# ResponsePaymentDetailsEpospay
 ## Properties
 
 Name | Type | Description | Notes

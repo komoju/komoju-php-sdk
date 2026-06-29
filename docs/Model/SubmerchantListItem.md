@@ -1,4 +1,4 @@
-# # SubmerchantListItem
+# SubmerchantListItem
 ## Properties
 
 Name | Type | Description | Notes

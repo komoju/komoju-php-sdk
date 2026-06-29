@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsDana
+# ResponsePaymentDetailsDana
 ## Properties
 
 Name | Type | Description | Notes

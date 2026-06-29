@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsRakutenpay
+# ResponsePaymentDetailsRakutenpay
 ## Properties
 
 Name | Type | Description | Notes

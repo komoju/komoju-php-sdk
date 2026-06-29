@@ -1,4 +1,4 @@
-# # BarcodePendingResponse
+# BarcodePendingResponse
 ## Properties
 
 Name | Type | Description | Notes

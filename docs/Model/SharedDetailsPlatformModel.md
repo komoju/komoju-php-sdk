@@ -1,4 +1,4 @@
-# # SharedDetailsPlatformModel
+# SharedDetailsPlatformModel
 ## Properties
 
 Name | Type | Description | Notes

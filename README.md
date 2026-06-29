@@ -1,14 +1,15 @@
 # komoju-php-sdk
 
-PHP client for the KOMOJU Payments API — Full featured access to the KOMOJU payments system.
+The KOMOJU PHP SDK is a full-featured PHP client for the KOMOJU Payments API, built on [Guzzle](https://github.com/guzzle/guzzle).
+
+For a full reference of all available endpoints and models, see the [KOMOJU API Reference](https://doc.komoju.com/reference/getting-started).
 
 ## Installation
+Install the package via Composer.
 
 ```bash
-composer require komoju-official/komoju-sdk:^1.0.0-beta.1
+composer require komoju-official/komoju-sdk:^1.0.0
 ```
-
-Requires PHP 7.4+ and the `curl`, `json`, and `mbstring` extensions.
 
 ## Quick Start
 
@@ -22,74 +23,63 @@ $config = Komoju\Configuration::getDefaultConfiguration()
 
 Get your API keys from the [KOMOJU Merchant Settings](https://komoju.com/merchant/settings).
 
-### Accept a Payment
+## Example: Hosted Page Payment
 
-Charge a customer directly with their payment details:
+The following example walks through a basic hosted page payment flow. For a full guide, see the [Hosted Page Integration Guide](https://doc.komoju.com/docs/hosted-page-integration-guide).
 
-```php
-<?php
-require_once __DIR__ . '/vendor/autoload.php';
+### 1. Creating a Session
 
-$config = Komoju\Configuration::getDefaultConfiguration()
-    ->setApiKey('YOUR_SECRET_KEY');
-
-$paymentsApi = new Komoju\Api\PaymentsApi(new GuzzleHttp\Client(), $config);
-
-try {
-    $payment = $paymentsApi->createPayment(
-        new Komoju\Model\CreatePaymentRequestWithPaymentDetails([
-            'amount'          => 1000,
-            'currency'        => 'JPY',
-            'payment_details' => new Komoju\Model\CreditCardPaymentDetails([
-                'type'               => 'credit_card',
-                'number'             => '4111111111111111',
-                'month'              => 12,
-                'year'               => 2025,
-                'verification_value' => '123',
-            ]),
-        ])
-    );
-    echo "Payment created: {$payment->getId()} ({$payment->getStatus()})\n";
-
-    // Capture an authorized payment
-    $captured = $paymentsApi->capturePayment(
-        $payment->getId(),
-        new Komoju\Model\CapturePaymentRequest()
-    );
-    echo "Captured at: {$captured->getCapturedAt()}\n";
-} catch (Komoju\ApiException $e) {
-    echo "Error {$e->getCode()}: {$e->getMessage()}\n";
-}
-```
-
-### Hosted Payment Page (Sessions)
-
-Redirect customers to a KOMOJU-hosted checkout page:
+When your customer is ready to pay, create a session and redirect them to the returned `session_url`.
 
 ```php
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
-
-$config = Komoju\Configuration::getDefaultConfiguration()
-    ->setApiKey('YOUR_SECRET_KEY');
-
 $sessionsApi = new Komoju\Api\SessionsApi(new GuzzleHttp\Client(), $config);
 
-try {
-    $session = $sessionsApi->createSession(
-        new Komoju\Model\CreateSessionRequestWithPaymentMode([
-            'mode'           => 'payment',
-            'amount'         => 5000,
-            'currency'       => 'JPY',
-            'return_url'     => 'https://example.com/thank-you',
-            'default_locale' => 'ja',
-        ])
-    );
-    echo "Redirect customer to: {$session->getSessionUrl()}\n";
-} catch (Komoju\ApiException $e) {
-    echo "Error {$e->getCode()}: {$e->getMessage()}\n";
+$session = $sessionsApi->createSession(
+    new Komoju\Model\CreateSessionRequestWithPaymentMode([
+        'mode'       => 'payment',
+        'amount'     => 1000,
+        'currency'   => 'JPY',
+        'return_url' => 'https://your-site.com/orders/return',
+    ])
+);
+
+header('Location: ' . $session->getSessionUrl());
+```
+
+### 2. Handling the Return URL
+
+After the customer pays, KOMOJU redirects them back to your `return_url` with a `session_id` query param appended:
+
+```
+https://your-site.com/orders/return?session_id=xxxxx
+```
+
+Fetch the session to check the outcome:
+
+```php
+<?php
+$sessionId = $_GET['session_id'];
+
+$komojuSession = $sessionsApi->showSession($sessionId);
+
+if ($komojuSession->getStatus() === Komoju\Model\SessionStatus::COMPLETED) {
+    // payment status will be "captured", "authorized", or "pending"
+    echo 'Payment ' . $komojuSession->getPayment()->getStatus();
+} else {
+    echo 'Payment was cancelled or failed';
 }
 ```
+
+### 3. Set Up Webhooks (Recommended)
+
+It is possible that the redirect in step 2 fails, possibly due to the user closing their browser, network issues, etc. Or, that the capture will only take place later on, such as with Convenience Store payments. To account for this, we recommend setting up a [Webhook](https://doc.komoju.com/docs/webhooks) to listen for payment events such as `payment.captured`, `payment.authorized`, and `payment.cancelled`. Configure your webhook URL in the [KOMOJU Merchant Dashboard](https://komoju.com/merchant/settings).
+
+#### Verifying Webhook Signatures
+
+To ensure a webhook request genuinely came from KOMOJU, set a **secret token** when creating or updating the webhook. KOMOJU then signs every delivery with a SHA-256 HMAC of the raw request body in the `X-Komoju-Signature` header, which you can recompute and verify.
+
+See [Webhooks → Secret Token](https://doc.komoju.com/docs/webhooks#secret-token) for the full explanation and code examples.
 
 ## Error Handling
 
@@ -114,6 +104,10 @@ All URIs are relative to *https://komoju.com/api/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BarcodesApi* | [**showBarcode**](docs/Api/BarcodesApi.md#showbarcode) | **GET** /barcodes/{payment_id} | Barcode: Show
+*ChargebacksApi* | [**acceptChargebackRequest**](docs/Api/ChargebacksApi.md#acceptchargebackrequest) | **POST** /chargeback_requests/{id}/accept | Chargeback: Accept
+*ChargebacksApi* | [**defendChargebackRequest**](docs/Api/ChargebacksApi.md#defendchargebackrequest) | **POST** /chargeback_requests/{id}/defend | Chargeback: Defend
+*ChargebacksApi* | [**listChargebackRequests**](docs/Api/ChargebacksApi.md#listchargebackrequests) | **GET** /chargeback_requests | Chargeback: List
+*ChargebacksApi* | [**showChargebackRequest**](docs/Api/ChargebacksApi.md#showchargebackrequest) | **GET** /chargeback_requests/{id} | Chargeback: Show
 *DisbursementsApi* | [**cancelDisbursement**](docs/Api/DisbursementsApi.md#canceldisbursement) | **POST** /disbursements/{id}/cancel | Disbursement: Cancel
 *DisbursementsApi* | [**createDisbursement**](docs/Api/DisbursementsApi.md#createdisbursement) | **POST** /disbursements | Disbursement: Create
 *DisbursementsApi* | [**disbursementReport**](docs/Api/DisbursementsApi.md#disbursementreport) | **GET** /disbursements/report | Disbursement: Report
@@ -136,7 +130,7 @@ Class | Method | HTTP request | Description
 *PlatformModelApi* | [**createFile**](docs/Api/PlatformModelApi.md#createfile) | **POST** /merchants/{merchant_id}/files | File: Create
 *PlatformModelApi* | [**createMerchant**](docs/Api/PlatformModelApi.md#createmerchant) | **POST** /merchants | Merchant: Create
 *PlatformModelApi* | [**createMerchantBalanceTransfer**](docs/Api/PlatformModelApi.md#createmerchantbalancetransfer) | **POST** /merchants/{merchant_id}/balances/{currency}/transfer | Balance: Transfer
-*PlatformModelApi* | [**editMerchantBalanceSettings**](docs/Api/PlatformModelApi.md#editmerchantbalancesettings) | **PATCH** /merchants/{merchant_id}/balances/{currency}/settings | Balances: Edit Settings
+*PlatformModelApi* | [**editMerchantBalanceSettings**](docs/Api/PlatformModelApi.md#editmerchantbalancesettings) | **PUT** /merchants/{merchant_id}/balances/{currency}/settings | Balances: Edit Settings
 *PlatformModelApi* | [**listLiveApplicationPaymentMethods**](docs/Api/PlatformModelApi.md#listliveapplicationpaymentmethods) | **GET** /live_application/{merchant_id}/payment_methods | Live Application: Payment Methods
 *PlatformModelApi* | [**listMerchants**](docs/Api/PlatformModelApi.md#listmerchants) | **GET** /merchants | Merchant: List
 *PlatformModelApi* | [**listSubmerchantPayments**](docs/Api/PlatformModelApi.md#listsubmerchantpayments) | **GET** /merchants/{merchant_id}/payments | Payment: List for Merchant
@@ -164,7 +158,9 @@ Class | Method | HTTP request | Description
 *SessionsApi* | [**createSession**](docs/Api/SessionsApi.md#createsession) | **POST** /sessions | Session: Create
 *SessionsApi* | [**paySession**](docs/Api/SessionsApi.md#paysession) | **POST** /sessions/{id}/pay | Session: Pay
 *SessionsApi* | [**showSession**](docs/Api/SessionsApi.md#showsession) | **GET** /sessions/{id} | Session: Show
+*SettlementsApi* | [**balanceTransactions**](docs/Api/SettlementsApi.md#balancetransactions) | **GET** /balances/{currency}/transactions | Balance: Transactions
 *SettlementsApi* | [**listSettlements**](docs/Api/SettlementsApi.md#listsettlements) | **GET** /settlements | Settlement: Index
+*SettlementsApi* | [**showBalance**](docs/Api/SettlementsApi.md#showbalance) | **GET** /balances/{currency} | Balance: Show
 *SettlementsApi* | [**showSettlement**](docs/Api/SettlementsApi.md#showsettlement) | **GET** /settlements/{id} | Settlement: Show
 *SettlementsApi* | [**showSettlementCSV**](docs/Api/SettlementsApi.md#showsettlementcsv) | **GET** /settlements/{id}/csv | Settlement: CSV
 *SettlementsApi* | [**showSettlementPDF**](docs/Api/SettlementsApi.md#showsettlementpdf) | **GET** /settlements/{id}/pdf | Settlement: PDF
@@ -199,7 +195,18 @@ Class | Method | HTTP request | Description
 - [BarcodeReadyResponse](docs/Model/BarcodeReadyResponse.md)
 - [CancelDisbursementRequest](docs/Model/CancelDisbursementRequest.md)
 - [CapturePaymentRequest](docs/Model/CapturePaymentRequest.md)
-- [CapturePaymentRequestTax](docs/Model/CapturePaymentRequestTax.md)
+- [ChargebackCustomer](docs/Model/ChargebackCustomer.md)
+- [ChargebackDefense](docs/Model/ChargebackDefense.md)
+- [ChargebackDefenseDocument](docs/Model/ChargebackDefenseDocument.md)
+- [ChargebackDefenseRecipientInfo](docs/Model/ChargebackDefenseRecipientInfo.md)
+- [ChargebackDefenseShippingInfo](docs/Model/ChargebackDefenseShippingInfo.md)
+- [ChargebackPayment](docs/Model/ChargebackPayment.md)
+- [ChargebackPaymentMethod](docs/Model/ChargebackPaymentMethod.md)
+- [ChargebackRequestDetail](docs/Model/ChargebackRequestDetail.md)
+- [ChargebackRequestList](docs/Model/ChargebackRequestList.md)
+- [ChargebackRequestListItem](docs/Model/ChargebackRequestListItem.md)
+- [ChargebackStatus](docs/Model/ChargebackStatus.md)
+- [ChargebackTimelineEntry](docs/Model/ChargebackTimelineEntry.md)
 - [CountryCode](docs/Model/CountryCode.md)
 - [CreateCustomerRequest](docs/Model/CreateCustomerRequest.md)
 - [CreateDisbursementRequest](docs/Model/CreateDisbursementRequest.md)
@@ -224,7 +231,11 @@ Class | Method | HTTP request | Description
 - [Customer](docs/Model/Customer.md)
 - [CustomerList](docs/Model/CustomerList.md)
 - [CustomerSource](docs/Model/CustomerSource.md)
-- [DeleteExternalCustomerResponse](docs/Model/DeleteExternalCustomerResponse.md)
+- [DefendChargebackDocument](docs/Model/DefendChargebackDocument.md)
+- [DefendChargebackRecipientInfo](docs/Model/DefendChargebackRecipientInfo.md)
+- [DefendChargebackRequestBody](docs/Model/DefendChargebackRequestBody.md)
+- [DefendChargebackShippingInfo](docs/Model/DefendChargebackShippingInfo.md)
+- [DeleteExternalCustomer200Response](docs/Model/DeleteExternalCustomer200Response.md)
 - [Disbursement](docs/Model/Disbursement.md)
 - [DisbursementList](docs/Model/DisbursementList.md)
 - [DisbursementStatus](docs/Model/DisbursementStatus.md)
@@ -321,6 +332,9 @@ Class | Method | HTTP request | Description
 - [PaymentDetailsWechatpay](docs/Model/PaymentDetailsWechatpay.md)
 - [PaymentList](docs/Model/PaymentList.md)
 - [PaymentMethod](docs/Model/PaymentMethod.md)
+- [PaymentMethodApplication](docs/Model/PaymentMethodApplication.md)
+- [PaymentMethodApplicationStatus](docs/Model/PaymentMethodApplicationStatus.md)
+- [PaymentMethodApplicationWithSubmittedFields](docs/Model/PaymentMethodApplicationWithSubmittedFields.md)
 - [PaymentMethodBrands](docs/Model/PaymentMethodBrands.md)
 - [PaymentMethodInstallmentsInner](docs/Model/PaymentMethodInstallmentsInner.md)
 - [PaymentMethodStatus](docs/Model/PaymentMethodStatus.md)
@@ -399,6 +413,7 @@ Class | Method | HTTP request | Description
 - [ResponsePaymentDetailsWebMoney](docs/Model/ResponsePaymentDetailsWebMoney.md)
 - [ResponsePaymentDetailsWechatpay](docs/Model/ResponsePaymentDetailsWechatpay.md)
 - [SecureToken](docs/Model/SecureToken.md)
+- [SecureTokenThreeDSecureAccount](docs/Model/SecureTokenThreeDSecureAccount.md)
 - [SerializedSubmerchant](docs/Model/SerializedSubmerchant.md)
 - [SerializedSubmerchantActivePaymentMethodsInner](docs/Model/SerializedSubmerchantActivePaymentMethodsInner.md)
 - [SerializedSubmerchantExpirySettingsInner](docs/Model/SerializedSubmerchantExpirySettingsInner.md)
@@ -417,6 +432,7 @@ Class | Method | HTTP request | Description
 - [SharedDetailsPayments](docs/Model/SharedDetailsPayments.md)
 - [SharedDetailsPlatformModel](docs/Model/SharedDetailsPlatformModel.md)
 - [SharedDetailsRefunds](docs/Model/SharedDetailsRefunds.md)
+- [ShowBalance200Response](docs/Model/ShowBalance200Response.md)
 - [ShowBarcodeResponse](docs/Model/ShowBarcodeResponse.md)
 - [SimulateLiveApplicationPaymentMethodStatusRequest](docs/Model/SimulateLiveApplicationPaymentMethodStatusRequest.md)
 - [StatementDescriptor](docs/Model/StatementDescriptor.md)

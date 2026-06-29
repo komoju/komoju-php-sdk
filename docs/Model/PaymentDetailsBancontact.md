@@ -1,4 +1,4 @@
-# # PaymentDetailsBancontact
+# PaymentDetailsBancontact
 ## Properties
 
 Name | Type | Description | Notes

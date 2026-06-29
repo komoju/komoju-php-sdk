@@ -1,4 +1,4 @@
-# # PaymentDetailsKonbini
+# PaymentDetailsKonbini
 ## Properties
 
 Name | Type | Description | Notes

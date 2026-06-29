@@ -1,4 +1,4 @@
-# # MerchantData
+# MerchantData
 ## Properties
 
 Name | Type | Description | Notes

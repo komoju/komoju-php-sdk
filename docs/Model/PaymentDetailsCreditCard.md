@@ -1,4 +1,4 @@
-# # PaymentDetailsCreditCard
+# PaymentDetailsCreditCard
 ## Properties
 
 Name | Type | Description | Notes

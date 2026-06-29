@@ -1,4 +1,4 @@
-# # PaymentDetailsFpx
+# PaymentDetailsFpx
 ## Properties
 
 Name | Type | Description | Notes

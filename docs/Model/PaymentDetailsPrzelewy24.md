@@ -1,4 +1,4 @@
-# # PaymentDetailsPrzelewy24
+# PaymentDetailsPrzelewy24
 ## Properties
 
 Name | Type | Description | Notes

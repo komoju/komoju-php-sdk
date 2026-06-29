@@ -1,4 +1,4 @@
-# # SubscriptionPaymentDetails
+# SubscriptionPaymentDetails
 ## Properties
 
 Name | Type | Description | Notes

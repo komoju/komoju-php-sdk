@@ -1,4 +1,4 @@
-# # SharedDetailsCorrections
+# SharedDetailsCorrections
 ## Properties
 
 Name | Type | Description | Notes

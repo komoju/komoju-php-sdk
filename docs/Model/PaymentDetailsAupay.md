@@ -1,4 +1,4 @@
-# # PaymentDetailsAupay
+# PaymentDetailsAupay
 ## Properties
 
 Name | Type | Description | Notes

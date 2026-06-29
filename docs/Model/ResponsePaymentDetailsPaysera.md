@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsPaysera
+# ResponsePaymentDetailsPaysera
 ## Properties
 
 Name | Type | Description | Notes

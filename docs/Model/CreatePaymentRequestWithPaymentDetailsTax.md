@@ -1,4 +1,4 @@
-# # CreatePaymentRequestWithPaymentDetailsTax
+# CreatePaymentRequestWithPaymentDetailsTax
 ## Concrete types
 
 Use one of the following classes when constructing a `CreatePaymentRequestWithPaymentDetailsTax`:

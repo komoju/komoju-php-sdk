@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsGCash
+# ResponsePaymentDetailsGCash
 ## Properties
 
 Name | Type | Description | Notes

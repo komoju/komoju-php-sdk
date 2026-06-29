@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsBankTransfer
+# ResponsePaymentDetailsBankTransfer
 ## Properties
 
 Name | Type | Description | Notes

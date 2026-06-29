@@ -1,9 +1,9 @@
-# # BalanceTransactionList
+# BalanceTransactionList
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource** | **string** | Resource type name for this list, always \&quot;balance_transaction_list\&quot;. |
+**resource** | **string** | Resource type name for this list, always \&quot;list\&quot;. |
 **data** | [**\Komoju\Model\Transaction[]**](Transaction.md) | Array of ledger transaction objects. |
 **start_time** | **\DateTime** | Start of the time range for records in this response. |
 **end_time** | **\DateTime** | End of the time range for records in this response. |

@@ -1,4 +1,4 @@
-# # PaymentDetailsIdeal
+# PaymentDetailsIdeal
 ## Properties
 
 Name | Type | Description | Notes

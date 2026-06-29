@@ -1,4 +1,4 @@
-# # LiveApplicationRequest
+# LiveApplicationRequest
 ## Properties
 
 Name | Type | Description | Notes

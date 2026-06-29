@@ -1,4 +1,4 @@
-# # APIErrorBody
+# APIErrorBody
 ## Properties
 
 Name | Type | Description | Notes

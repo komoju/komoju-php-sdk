@@ -1,4 +1,4 @@
-# # SerializedSubmerchantActivePaymentMethodsInner
+# SerializedSubmerchantActivePaymentMethodsInner
 ## Properties
 
 Name | Type | Description | Notes

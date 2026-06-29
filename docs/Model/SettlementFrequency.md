@@ -1,4 +1,4 @@
-# # SettlementFrequency
+# SettlementFrequency
 ## Properties
 
 Name | Type | Description | Notes

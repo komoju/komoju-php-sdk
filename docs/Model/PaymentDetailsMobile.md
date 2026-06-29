@@ -1,4 +1,4 @@
-# # PaymentDetailsMobile
+# PaymentDetailsMobile
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # PaymentDetailsDragonpay
+# PaymentDetailsDragonpay
 ## Properties
 
 Name | Type | Description | Notes

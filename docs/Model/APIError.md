@@ -1,4 +1,4 @@
-# # APIError
+# APIError
 ## Properties
 
 Name | Type | Description | Notes

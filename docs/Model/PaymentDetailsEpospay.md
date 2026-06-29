@@ -1,4 +1,4 @@
-# # PaymentDetailsEpospay
+# PaymentDetailsEpospay
 ## Properties
 
 Name | Type | Description | Notes

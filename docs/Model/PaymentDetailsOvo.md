@@ -1,4 +1,4 @@
-# # PaymentDetailsOvo
+# PaymentDetailsOvo
 ## Properties
 
 Name | Type | Description | Notes

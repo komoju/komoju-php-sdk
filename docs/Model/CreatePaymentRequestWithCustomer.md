@@ -1,4 +1,4 @@
-# # CreatePaymentRequestWithCustomer
+# CreatePaymentRequestWithCustomer
 ## Properties
 
 Name | Type | Description | Notes

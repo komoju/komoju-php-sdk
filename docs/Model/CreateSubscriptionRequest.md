@@ -1,4 +1,4 @@
-# # CreateSubscriptionRequest
+# CreateSubscriptionRequest
 ## Properties
 
 Name | Type | Description | Notes

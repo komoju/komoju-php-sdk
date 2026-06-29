@@ -1,4 +1,4 @@
-# # PlatformDetails
+# PlatformDetails
 ## Properties
 
 Name | Type | Description | Notes

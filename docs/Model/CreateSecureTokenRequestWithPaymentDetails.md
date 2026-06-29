@@ -1,4 +1,4 @@
-# # CreateSecureTokenRequestWithPaymentDetails
+# CreateSecureTokenRequestWithPaymentDetails
 ## Properties
 
 Name | Type | Description | Notes

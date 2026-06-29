@@ -1,4 +1,4 @@
-# # BalanceSettings
+# BalanceSettings
 ## Properties
 
 Name | Type | Description | Notes

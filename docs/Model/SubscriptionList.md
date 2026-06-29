@@ -1,4 +1,4 @@
-# # SubscriptionList
+# SubscriptionList
 ## Properties
 
 Name | Type | Description | Notes

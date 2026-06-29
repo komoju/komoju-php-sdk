@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsAU
+# ResponsePaymentDetailsAU
 ## Properties
 
 Name | Type | Description | Notes

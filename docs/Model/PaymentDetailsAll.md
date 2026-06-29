@@ -1,4 +1,4 @@
-# # PaymentDetailsAll
+# PaymentDetailsAll
 ## Concrete types
 
 Use one of the following classes when constructing a `PaymentDetailsAll`:

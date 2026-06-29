@@ -1,4 +1,4 @@
-# # PaymentDataRequest
+# PaymentDataRequest
 ## Properties
 
 Name | Type | Description | Notes

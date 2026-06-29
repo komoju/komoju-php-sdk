@@ -1,4 +1,4 @@
-# # PaymentDetailsMultibanco
+# PaymentDetailsMultibanco
 ## Properties
 
 Name | Type | Description | Notes

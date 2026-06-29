@@ -1,4 +1,4 @@
-# # PaymentDetailsPerlas
+# PaymentDetailsPerlas
 ## Properties
 
 Name | Type | Description | Notes

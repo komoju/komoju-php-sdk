@@ -1,4 +1,4 @@
-# # PaymentDetailsBlik
+# PaymentDetailsBlik
 ## Properties
 
 Name | Type | Description | Notes

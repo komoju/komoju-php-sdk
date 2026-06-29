@@ -1,4 +1,4 @@
-# # PaySessionRequest
+# PaySessionRequest
 ## Properties
 
 Name | Type | Description | Notes

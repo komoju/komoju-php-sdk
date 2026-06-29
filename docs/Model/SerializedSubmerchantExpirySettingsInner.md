@@ -1,4 +1,4 @@
-# # SerializedSubmerchantExpirySettingsInner
+# SerializedSubmerchantExpirySettingsInner
 ## Properties
 
 Name | Type | Description | Notes

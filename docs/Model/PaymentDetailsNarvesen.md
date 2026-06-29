@@ -1,4 +1,4 @@
-# # PaymentDetailsNarvesen
+# PaymentDetailsNarvesen
 ## Properties
 
 Name | Type | Description | Notes

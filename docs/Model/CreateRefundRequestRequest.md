@@ -1,4 +1,4 @@
-# # CreateRefundRequestRequest
+# CreateRefundRequestRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -30,16 +30,10 @@ Fetches the latest barcode for a konbini payment.  Barcodes can be displayed in 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure your KOMOJU API key
-$config = Komoju\Configuration::getDefaultConfiguration()
-              ->setApiKey('YOUR_SECRET_KEY');
-
-
 $apiInstance = new Komoju\Api\BarcodesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $payment_id = 'payment_id_example'; // string | Payment unique identifier
 
@@ -63,7 +57,7 @@ try {
 
 ### Authorization
 
-[api_key](../../README.md#api_key)
+No authorization required
 
 ### HTTP request headers
 

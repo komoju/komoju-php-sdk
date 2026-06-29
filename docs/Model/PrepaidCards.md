@@ -1,4 +1,4 @@
-# # PrepaidCards
+# PrepaidCards
 ## Properties
 
 Name | Type | Description | Notes

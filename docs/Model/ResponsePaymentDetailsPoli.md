@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsPoli
+# ResponsePaymentDetailsPoli
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsDocomo
+# ResponsePaymentDetailsDocomo
 ## Properties
 
 Name | Type | Description | Notes

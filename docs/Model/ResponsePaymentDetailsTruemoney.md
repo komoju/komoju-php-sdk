@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsTruemoney
+# ResponsePaymentDetailsTruemoney
 ## Properties
 
 Name | Type | Description | Notes

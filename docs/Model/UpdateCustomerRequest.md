@@ -1,4 +1,4 @@
-# # UpdateCustomerRequest
+# UpdateCustomerRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # PaymentDetailsHappyMoney
+# PaymentDetailsHappyMoney
 ## Properties
 
 Name | Type | Description | Notes

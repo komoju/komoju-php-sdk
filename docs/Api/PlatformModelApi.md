@@ -8,7 +8,7 @@ All URIs are relative to https://komoju.com/api/v1, except if the operation defi
 | [**createFile()**](PlatformModelApi.md#createFile) | **POST** /merchants/{merchant_id}/files | File: Create |
 | [**createMerchant()**](PlatformModelApi.md#createMerchant) | **POST** /merchants | Merchant: Create |
 | [**createMerchantBalanceTransfer()**](PlatformModelApi.md#createMerchantBalanceTransfer) | **POST** /merchants/{merchant_id}/balances/{currency}/transfer | Balance: Transfer |
-| [**editMerchantBalanceSettings()**](PlatformModelApi.md#editMerchantBalanceSettings) | **PATCH** /merchants/{merchant_id}/balances/{currency}/settings | Balances: Edit Settings |
+| [**editMerchantBalanceSettings()**](PlatformModelApi.md#editMerchantBalanceSettings) | **PUT** /merchants/{merchant_id}/balances/{currency}/settings | Balances: Edit Settings |
 | [**listLiveApplicationPaymentMethods()**](PlatformModelApi.md#listLiveApplicationPaymentMethods) | **GET** /live_application/{merchant_id}/payment_methods | Live Application: Payment Methods |
 | [**listMerchants()**](PlatformModelApi.md#listMerchants) | **GET** /merchants | Merchant: List |
 | [**listSubmerchantPayments()**](PlatformModelApi.md#listSubmerchantPayments) | **GET** /merchants/{merchant_id}/payments | Payment: List for Merchant |
@@ -79,7 +79,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -141,7 +140,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -205,7 +203,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -265,7 +262,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -331,7 +327,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -396,7 +391,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -459,15 +453,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$start_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created after this time.
-$end_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created before this time.
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created after this time.
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created before this time.
 $per_page = 56; // int | How many objects per page.
 $page = 56; // int | Page number to query for.
 $live = True; // bool
@@ -536,7 +529,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -544,8 +536,8 @@ $apiInstance = new Komoju\Api\PlatformModelApi(
     $config
 );
 $merchant_id = 'merchant_id_example'; // string
-$start_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created after this time.
-$end_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created before this time.
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created after this time.
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created before this time.
 $per_page = 56; // int | How many objects per page.
 $page = 56; // int | Page number to query for.
 $currency = new \Komoju\Model\\Komoju\Model\Currency(); // \Komoju\Model\Currency
@@ -611,7 +603,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -672,7 +663,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -681,8 +671,8 @@ $apiInstance = new Komoju\Api\PlatformModelApi(
 );
 $merchant_id = 'merchant_id_example'; // string
 $currency = new \Komoju\Model\\Komoju\Model\Currency(); // \Komoju\Model\Currency
-$start_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created after this time.
-$end_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created before this time.
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created after this time.
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created before this time.
 $per_page = 56; // int | How many objects per page.
 $page = 56; // int | Page number to query for.
 $type = 'type_example'; // string
@@ -744,7 +734,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -808,7 +797,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -853,7 +841,7 @@ try {
 ## `showLiveApplicationPaymentMethod()`
 
 ```php
-showLiveApplicationPaymentMethod($merchant_id, $payment_method, $locale): \Komoju\Model\LiveApplicationWithSubmittedFields
+showLiveApplicationPaymentMethod($merchant_id, $payment_method, $locale): \Komoju\Model\PaymentMethodApplicationWithSubmittedFields
 ```
 
 Live Application: Show Payment Method
@@ -870,7 +858,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -900,7 +887,7 @@ try {
 
 ### Return type
 
-[**\Komoju\Model\LiveApplicationWithSubmittedFields**](../Model/LiveApplicationWithSubmittedFields.md)
+[**\Komoju\Model\PaymentMethodApplicationWithSubmittedFields**](../Model/PaymentMethodApplicationWithSubmittedFields.md)
 
 ### Authorization
 
@@ -935,7 +922,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -996,7 +982,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1060,7 +1045,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -1122,7 +1106,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1188,7 +1171,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -1250,7 +1232,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1316,7 +1297,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -1379,7 +1359,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -1440,7 +1419,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1503,7 +1481,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -1565,7 +1542,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -1610,7 +1586,7 @@ try {
 ## `updateLiveApplicationPaymentMethod()`
 
 ```php
-updateLiveApplicationPaymentMethod($merchant_id, $payment_method, $update_payment_method_request): \Komoju\Model\LiveApplication
+updateLiveApplicationPaymentMethod($merchant_id, $payment_method, $update_payment_method_request): \Komoju\Model\PaymentMethodApplication
 ```
 
 Live Application: Update Payment Method
@@ -1627,7 +1603,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1657,7 +1632,7 @@ try {
 
 ### Return type
 
-[**\Komoju\Model\LiveApplication**](../Model/LiveApplication.md)
+[**\Komoju\Model\PaymentMethodApplication**](../Model/PaymentMethodApplication.md)
 
 ### Authorization
 
@@ -1692,7 +1667,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\PlatformModelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.

@@ -1,4 +1,4 @@
-# # Submerchant
+# Submerchant
 ## Properties
 
 Name | Type | Description | Notes

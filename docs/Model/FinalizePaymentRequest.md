@@ -1,4 +1,4 @@
-# # FinalizePaymentRequest
+# FinalizePaymentRequest
 ## Properties
 
 Name | Type | Description | Notes

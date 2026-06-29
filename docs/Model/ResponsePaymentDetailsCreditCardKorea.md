@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsCreditCardKorea
+# ResponsePaymentDetailsCreditCardKorea
 ## Properties
 
 Name | Type | Description | Notes

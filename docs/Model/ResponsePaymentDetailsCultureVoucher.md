@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsCultureVoucher
+# ResponsePaymentDetailsCultureVoucher
 ## Properties
 
 Name | Type | Description | Notes

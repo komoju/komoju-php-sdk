@@ -1,4 +1,4 @@
-# # PaymentDetailsBitCash
+# PaymentDetailsBitCash
 ## Properties
 
 Name | Type | Description | Notes

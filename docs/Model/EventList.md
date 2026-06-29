@@ -1,4 +1,4 @@
-# # EventList
+# EventList
 ## Properties
 
 Name | Type | Description | Notes

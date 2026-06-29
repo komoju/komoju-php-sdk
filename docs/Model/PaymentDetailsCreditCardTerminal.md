@@ -1,4 +1,4 @@
-# # PaymentDetailsCreditCardTerminal
+# PaymentDetailsCreditCardTerminal
 ## Properties
 
 Name | Type | Description | Notes

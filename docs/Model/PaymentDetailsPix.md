@@ -1,4 +1,4 @@
-# # PaymentDetailsPix
+# PaymentDetailsPix
 ## Properties
 
 Name | Type | Description | Notes
