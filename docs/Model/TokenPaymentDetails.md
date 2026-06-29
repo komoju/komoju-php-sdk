@@ -1,4 +1,4 @@
-# # TokenPaymentDetails
+# TokenPaymentDetails
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # PaymentDetailsDocomo
+# PaymentDetailsDocomo
 ## Properties
 
 Name | Type | Description | Notes

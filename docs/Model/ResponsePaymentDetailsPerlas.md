@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsPerlas
+# ResponsePaymentDetailsPerlas
 ## Properties
 
 Name | Type | Description | Notes

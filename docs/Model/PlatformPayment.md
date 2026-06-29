@@ -1,4 +1,4 @@
-# # PlatformPayment
+# PlatformPayment
 ## Properties
 
 Name | Type | Description | Notes

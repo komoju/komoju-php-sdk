@@ -1,4 +1,4 @@
-# # PaymentDetailsEnets
+# PaymentDetailsEnets
 ## Properties
 
 Name | Type | Description | Notes

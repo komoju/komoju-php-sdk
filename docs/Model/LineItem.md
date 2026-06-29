@@ -1,4 +1,4 @@
-# # LineItem
+# LineItem
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,11 +1,11 @@
-# # CreateSessionRequestWithCustomerPaymentMode
+# CreateSessionRequestWithCustomerPaymentMode
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mode** | **string** | In &#x60;customer_payment&#x60; mode, a payment will be created and:  * If &#x60;customer_id&#x60; is omitted, a new customer will be created. * If &#x60;customer_id&#x60; is given, updated payment information will be saved to that customer. |
+**amount** | **int** | Amount greater than 0, in the lowest denomination of the currency (e.g. cents for USD). |
 **return_url** | **string** | Specify the URL where user will be redirected to after they have completed or aborted the session. A &#x60;session_id&#x60; will be appended to this URL as a query parameter. | [optional]
-**amount** | **int** | Amount greater than or equal to 0, in the lowest denomination of the currency (e.g. cents for USD). |
 **currency** | [**\Komoju\Model\Currency**](Currency.md) |  |
 **email** | **string** | Customer&#39;s email address. | [optional]
 **expires_in_seconds** | **int** | Time in seconds until the session expires after being created.  The default value and upper limit are 86,400 seconds (24 hours). | [optional]

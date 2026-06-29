@@ -1,4 +1,4 @@
-# # PaymentDetailsTNG
+# PaymentDetailsTNG
 ## Properties
 
 Name | Type | Description | Notes

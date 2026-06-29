@@ -36,7 +36,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.

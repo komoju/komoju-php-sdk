@@ -1,4 +1,4 @@
-# # Disbursement
+# Disbursement
 ## Properties
 
 Name | Type | Description | Notes

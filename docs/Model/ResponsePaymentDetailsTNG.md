@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsTNG
+# ResponsePaymentDetailsTNG
 ## Properties
 
 Name | Type | Description | Notes

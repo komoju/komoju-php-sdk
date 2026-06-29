@@ -1,4 +1,4 @@
-# # PaymentDetailsAU
+# PaymentDetailsAU
 ## Properties
 
 Name | Type | Description | Notes

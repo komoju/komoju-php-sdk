@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsEps
+# ResponsePaymentDetailsEps
 ## Properties
 
 Name | Type | Description | Notes

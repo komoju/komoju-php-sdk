@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsAlipayHK
+# ResponsePaymentDetailsAlipayHK
 ## Properties
 
 Name | Type | Description | Notes

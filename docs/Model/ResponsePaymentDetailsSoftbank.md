@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsSoftbank
+# ResponsePaymentDetailsSoftbank
 ## Properties
 
 Name | Type | Description | Notes

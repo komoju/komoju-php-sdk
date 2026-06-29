@@ -1,4 +1,4 @@
-# # LiveApplication
+# LiveApplication
 ## Properties
 
 Name | Type | Description | Notes

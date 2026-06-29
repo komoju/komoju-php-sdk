@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsPayco
+# ResponsePaymentDetailsPayco
 ## Properties
 
 Name | Type | Description | Notes

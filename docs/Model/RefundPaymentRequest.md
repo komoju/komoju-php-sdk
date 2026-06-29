@@ -1,4 +1,4 @@
-# # RefundPaymentRequest
+# RefundPaymentRequest
 ## Properties
 
 Name | Type | Description | Notes

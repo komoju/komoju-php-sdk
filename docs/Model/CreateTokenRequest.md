@@ -1,4 +1,4 @@
-# # CreateTokenRequest
+# CreateTokenRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -4,7 +4,9 @@ All URIs are relative to https://komoju.com/api/v1, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**balanceTransactions()**](SettlementsApi.md#balanceTransactions) | **GET** /balances/{currency}/transactions | Balance: Transactions |
 | [**listSettlements()**](SettlementsApi.md#listSettlements) | **GET** /settlements | Settlement: Index |
+| [**showBalance()**](SettlementsApi.md#showBalance) | **GET** /balances/{currency} | Balance: Show |
 | [**showSettlement()**](SettlementsApi.md#showSettlement) | **GET** /settlements/{id} | Settlement: Show |
 | [**showSettlementCSV()**](SettlementsApi.md#showSettlementCSV) | **GET** /settlements/{id}/csv | Settlement: CSV |
 | [**showSettlementPDF()**](SettlementsApi.md#showSettlementPDF) | **GET** /settlements/{id}/pdf | Settlement: PDF |
@@ -17,6 +19,76 @@ All URIs are relative to https://komoju.com/api/v1, except if the operation defi
 
 
 
+
+## `balanceTransactions()`
+
+```php
+balanceTransactions($currency, $start_time, $end_time, $per_page, $page, $type): \Komoju\Model\BalanceTransactionList
+```
+
+Balance: Transactions
+
+Given a currency, view the ledger transactions of the currently authenticated merchant. Will split ledger transactions into line items when appropriate.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure your KOMOJU API key
+$config = Komoju\Configuration::getDefaultConfiguration()
+              ->setApiKey('YOUR_SECRET_KEY');
+
+$apiInstance = new Komoju\Api\SettlementsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$currency = new \Komoju\Model\\Komoju\Model\Currency(); // \Komoju\Model\Currency
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created after this time.
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created before this time.
+$per_page = 56; // int | How many objects per page.
+$page = 56; // int | Page number to query for.
+$type = 'type_example'; // string
+
+try {
+    $result = $apiInstance->balanceTransactions($currency, $start_time, $end_time, $per_page, $page, $type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SettlementsApi->balanceTransactions: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **currency** | [**\Komoju\Model\Currency**](../Model/.md)|  | |
+| **start_time** | **\DateTime**| Query for records created after this time. | [optional] |
+| **end_time** | **\DateTime**| Query for records created before this time. | [optional] |
+| **per_page** | **int**| How many objects per page. | [optional] |
+| **page** | **int**| Page number to query for. | [optional] |
+| **type** | **string**|  | [optional] |
+
+### Return type
+
+[**\Komoju\Model\BalanceTransactionList**](../Model/BalanceTransactionList.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `listSettlements()`
 
@@ -39,15 +111,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\SettlementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$start_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created after this time.
-$end_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created before this time.
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created after this time.
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created before this time.
 $per_page = 56; // int | How many objects per page.
 $page = 56; // int | Page number to query for.
 
@@ -85,6 +156,66 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `showBalance()`
+
+```php
+showBalance($currency): \Komoju\Model\ShowBalance200Response
+```
+
+Balance: Show
+
+Given a currency, view the unsettled balance of the currently authenticated merchant.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure your KOMOJU API key
+$config = Komoju\Configuration::getDefaultConfiguration()
+              ->setApiKey('YOUR_SECRET_KEY');
+
+$apiInstance = new Komoju\Api\SettlementsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$currency = new \Komoju\Model\\Komoju\Model\Currency(); // \Komoju\Model\Currency
+
+try {
+    $result = $apiInstance->showBalance($currency);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SettlementsApi->showBalance: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **currency** | [**\Komoju\Model\Currency**](../Model/.md)|  | |
+
+### Return type
+
+[**\Komoju\Model\ShowBalance200Response**](../Model/ShowBalance200Response.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `showSettlement()`
 
 ```php
@@ -105,7 +236,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\SettlementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -167,7 +297,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\SettlementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -226,7 +355,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\SettlementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -287,7 +415,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\SettlementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -329,12 +456,12 @@ void (empty response body)
 ## `showTransaction()`
 
 ```php
-showTransaction($currency, $transaction_uuid): \Komoju\Model\Transaction
+showTransaction($currency, $transaction_uuid): \Komoju\Model\Transaction[]
 ```
 
 Balance: Transaction
 
-Retrieves a single ledger transaction by its UUID for the given currency.
+Retrieves a single ledger transaction by its UUID for the given currency. Will return one entry per line item of the transaction.
 
 ### Example
 
@@ -346,7 +473,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\SettlementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -374,7 +500,7 @@ try {
 
 ### Return type
 
-[**\Komoju\Model\Transaction**](../Model/Transaction.md)
+[**\Komoju\Model\Transaction[]**](../Model/Transaction.md)
 
 ### Authorization
 

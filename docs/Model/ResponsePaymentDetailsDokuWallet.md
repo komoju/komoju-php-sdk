@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsDokuWallet
+# ResponsePaymentDetailsDokuWallet
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # CustomerSource
+# CustomerSource
 ## Properties
 
 Name | Type | Description | Notes

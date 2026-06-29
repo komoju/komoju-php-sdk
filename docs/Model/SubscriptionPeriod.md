@@ -1,4 +1,4 @@
-# # SubscriptionPeriod
+# SubscriptionPeriod
 ## Properties
 
 Name | Type | Description | Notes

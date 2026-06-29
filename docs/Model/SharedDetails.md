@@ -1,4 +1,4 @@
-# # SharedDetails
+# SharedDetails
 ## Properties
 
 Name | Type | Description | Notes

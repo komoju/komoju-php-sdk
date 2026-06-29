@@ -1,4 +1,4 @@
-# # UpdatePaymentRequest
+# UpdatePaymentRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsGiropay
+# ResponsePaymentDetailsGiropay
 ## Properties
 
 Name | Type | Description | Notes

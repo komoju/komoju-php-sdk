@@ -1,4 +1,4 @@
-# # MerchantSubmissionStatus
+# MerchantSubmissionStatus
 ## Properties
 
 Name | Type | Description | Notes

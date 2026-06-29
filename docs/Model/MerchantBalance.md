@@ -1,4 +1,4 @@
-# # MerchantBalance
+# MerchantBalance
 ## Properties
 
 Name | Type | Description | Notes

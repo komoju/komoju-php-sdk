@@ -1,4 +1,4 @@
-# # PaymentDetailsWebMoney
+# PaymentDetailsWebMoney
 ## Properties
 
 Name | Type | Description | Notes

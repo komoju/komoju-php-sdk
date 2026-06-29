@@ -1,4 +1,4 @@
-# # EditMerchantBalanceSettingsRequest
+# EditMerchantBalanceSettingsRequest
 ## Properties
 
 Name | Type | Description | Notes

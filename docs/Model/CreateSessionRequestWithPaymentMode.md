@@ -1,11 +1,11 @@
-# # CreateSessionRequestWithPaymentMode
+# CreateSessionRequestWithPaymentMode
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mode** | **string** | In &#x60;payment&#x60; mode, a payment will be created after customer has completed the session. |
+**mode** | **string** | In &#x60;payment&#x60; mode, a payment will be created after customer has completed the session.  &#x60;payment&#x60; is the default mode and may be omitted. | [optional]
+**amount** | **int** | Amount greater than 0, in the lowest denomination of the currency (e.g. cents for USD). |
 **return_url** | **string** | Specify the URL where user will be redirected to after they have completed or aborted the session. A &#x60;session_id&#x60; will be appended to this URL as a query parameter. | [optional]
-**amount** | **int** | Amount greater than or equal to 0, in the lowest denomination of the currency (e.g. cents for USD). |
 **currency** | [**\Komoju\Model\Currency**](Currency.md) |  |
 **email** | **string** | Customer&#39;s email address. | [optional]
 **expires_in_seconds** | **int** | Time in seconds until the session expires after being created.  The default value and upper limit are 86,400 seconds (24 hours). | [optional]

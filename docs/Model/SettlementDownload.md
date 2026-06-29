@@ -1,4 +1,4 @@
-# # SettlementDownload
+# SettlementDownload
 ## Properties
 
 Name | Type | Description | Notes

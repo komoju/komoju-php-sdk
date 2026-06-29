@@ -1,4 +1,4 @@
-# # CreatePaymentRequestWithPaymentDetails
+# CreatePaymentRequestWithPaymentDetails
 ## Properties
 
 Name | Type | Description | Notes

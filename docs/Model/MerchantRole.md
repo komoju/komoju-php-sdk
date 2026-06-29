@@ -1,4 +1,4 @@
-# # MerchantRole
+# MerchantRole
 ## Properties
 
 Name | Type | Description | Notes

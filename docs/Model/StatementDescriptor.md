@@ -1,4 +1,4 @@
-# # StatementDescriptor
+# StatementDescriptor
 ## Properties
 
 Name | Type | Description | Notes

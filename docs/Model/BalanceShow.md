@@ -1,4 +1,4 @@
-# # BalanceShow
+# BalanceShow
 ## Properties
 
 Name | Type | Description | Notes

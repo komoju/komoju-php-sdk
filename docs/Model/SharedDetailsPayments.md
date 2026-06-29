@@ -1,4 +1,4 @@
-# # SharedDetailsPayments
+# SharedDetailsPayments
 ## Properties
 
 Name | Type | Description | Notes

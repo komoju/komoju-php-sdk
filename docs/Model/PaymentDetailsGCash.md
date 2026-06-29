@@ -1,4 +1,4 @@
-# # PaymentDetailsGCash
+# PaymentDetailsGCash
 ## Properties
 
 Name | Type | Description | Notes

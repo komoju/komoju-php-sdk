@@ -1,4 +1,4 @@
-# # SubscriptionCustomer
+# SubscriptionCustomer
 ## Properties
 
 Name | Type | Description | Notes

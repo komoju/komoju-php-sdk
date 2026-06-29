@@ -1,4 +1,4 @@
-# # PaymentDetailsUnionpay
+# PaymentDetailsUnionpay
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsPaysafeCash
+# ResponsePaymentDetailsPaysafeCash
 ## Properties
 
 Name | Type | Description | Notes

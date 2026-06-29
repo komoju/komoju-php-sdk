@@ -42,7 +42,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\DisbursementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -105,7 +104,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\DisbursementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -166,15 +164,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\DisbursementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$start_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
 $currency = new \Komoju\Model\\Komoju\Model\Currency(); // \Komoju\Model\Currency
 $status = new \Komoju\Model\\Komoju\Model\DisbursementStatus(); // \Komoju\Model\DisbursementStatus
 
@@ -232,15 +229,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
 
-
 $apiInstance = new Komoju\Api\DisbursementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$start_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created after this time.
-$end_time = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Query for records created before this time.
+$start_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created after this time.
+$end_time = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Query for records created before this time.
 $per_page = 56; // int | How many objects per page.
 $page = 56; // int | Page number to query for.
 $currency = new \Komoju\Model\\Komoju\Model\Currency(); // \Komoju\Model\Currency
@@ -300,7 +296,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure your KOMOJU API key
 $config = Komoju\Configuration::getDefaultConfiguration()
               ->setApiKey('YOUR_SECRET_KEY');
-
 
 $apiInstance = new Komoju\Api\DisbursementsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.

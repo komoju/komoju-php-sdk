@@ -1,4 +1,4 @@
-# # BalanceTransferRequest
+# BalanceTransferRequest
 ## Properties
 
 Name | Type | Description | Notes

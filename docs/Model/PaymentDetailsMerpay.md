@@ -1,4 +1,4 @@
-# # PaymentDetailsMerpay
+# PaymentDetailsMerpay
 ## Properties
 
 Name | Type | Description | Notes

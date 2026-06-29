@@ -1,4 +1,4 @@
-# # ProcessingMerchant
+# ProcessingMerchant
 ## Properties
 
 Name | Type | Description | Notes

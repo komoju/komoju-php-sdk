@@ -1,4 +1,4 @@
-# # SessionMode
+# SessionMode
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # BalanceTransferServiceRecord
+# BalanceTransferServiceRecord
 ## Properties
 
 Name | Type | Description | Notes

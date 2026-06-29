@@ -1,4 +1,4 @@
-# # LiveApplicationStatus
+# LiveApplicationStatus
 ## Properties
 
 Name | Type | Description | Notes

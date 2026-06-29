@@ -1,4 +1,4 @@
-# # PaymentDetailsTruemoney
+# PaymentDetailsTruemoney
 ## Properties
 
 Name | Type | Description | Notes

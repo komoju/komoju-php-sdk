@@ -1,4 +1,4 @@
-# # SharedDetailsRefunds
+# SharedDetailsRefunds
 ## Properties
 
 Name | Type | Description | Notes

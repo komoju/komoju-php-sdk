@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsDospara
+# ResponsePaymentDetailsDospara
 ## Properties
 
 Name | Type | Description | Notes

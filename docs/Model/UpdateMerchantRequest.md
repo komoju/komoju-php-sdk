@@ -1,4 +1,4 @@
-# # UpdateMerchantRequest
+# UpdateMerchantRequest
 ## Properties
 
 Name | Type | Description | Notes

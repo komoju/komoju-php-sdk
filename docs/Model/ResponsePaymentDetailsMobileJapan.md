@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsMobileJapan
+# ResponsePaymentDetailsMobileJapan
 ## Properties
 
 Name | Type | Description | Notes

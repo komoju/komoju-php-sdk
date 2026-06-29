@@ -1,4 +1,4 @@
-# # CreateMerchantBalanceTransferRequest
+# CreateMerchantBalanceTransferRequest
 ## Properties
 
 Name | Type | Description | Notes

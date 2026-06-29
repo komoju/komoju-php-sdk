@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsMultibanco
+# ResponsePaymentDetailsMultibanco
 ## Properties
 
 Name | Type | Description | Notes

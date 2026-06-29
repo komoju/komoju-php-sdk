@@ -1,4 +1,4 @@
-# # SubmittedField
+# SubmittedField
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # PaymentDetailsWechatpay
+# PaymentDetailsWechatpay
 ## Properties
 
 Name | Type | Description | Notes

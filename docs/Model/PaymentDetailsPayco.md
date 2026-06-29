@@ -1,4 +1,4 @@
-# # PaymentDetailsPayco
+# PaymentDetailsPayco
 ## Properties
 
 Name | Type | Description | Notes

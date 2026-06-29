@@ -1,4 +1,4 @@
-# # PaymentData
+# PaymentData
 ## Properties
 
 Name | Type | Description | Notes

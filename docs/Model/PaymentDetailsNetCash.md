@@ -1,4 +1,4 @@
-# # PaymentDetailsNetCash
+# PaymentDetailsNetCash
 ## Properties
 
 Name | Type | Description | Notes

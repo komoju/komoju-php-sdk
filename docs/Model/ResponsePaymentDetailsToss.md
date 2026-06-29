@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsToss
+# ResponsePaymentDetailsToss
 ## Properties
 
 Name | Type | Description | Notes

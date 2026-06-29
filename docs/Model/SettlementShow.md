@@ -1,4 +1,4 @@
-# # SettlementShow
+# SettlementShow
 ## Properties
 
 Name | Type | Description | Notes

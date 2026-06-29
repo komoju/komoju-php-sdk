@@ -1,4 +1,4 @@
-# # TerminalError
+# TerminalError
 ## Properties
 
 Name | Type | Description | Notes

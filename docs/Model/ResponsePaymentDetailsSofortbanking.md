@@ -1,4 +1,4 @@
-# # ResponsePaymentDetailsSofortbanking
+# ResponsePaymentDetailsSofortbanking
 ## Properties
 
 Name | Type | Description | Notes

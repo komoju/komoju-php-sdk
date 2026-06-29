@@ -1,4 +1,4 @@
-# # SharedDetailsDisbursements
+# SharedDetailsDisbursements
 ## Properties
 
 Name | Type | Description | Notes

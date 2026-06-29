@@ -1,4 +1,4 @@
-# # Intent
+# Intent
 ## Properties
 
 Name | Type | Description | Notes

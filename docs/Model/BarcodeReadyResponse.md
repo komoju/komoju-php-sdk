@@ -1,4 +1,4 @@
-# # BarcodeReadyResponse
+# BarcodeReadyResponse
 ## Properties
 
 Name | Type | Description | Notes

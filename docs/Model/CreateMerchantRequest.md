@@ -1,4 +1,4 @@
-# # CreateMerchantRequest
+# CreateMerchantRequest
 ## Properties
 
 Name | Type | Description | Notes

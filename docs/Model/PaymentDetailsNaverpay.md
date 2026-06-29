@@ -1,4 +1,4 @@
-# # PaymentDetailsNaverpay
+# PaymentDetailsNaverpay
 ## Properties
 
 Name | Type | Description | Notes

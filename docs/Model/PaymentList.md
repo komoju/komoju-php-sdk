@@ -1,4 +1,4 @@
-# # PaymentList
+# PaymentList
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# # CreateCustomerRequest
+# CreateCustomerRequest
 ## Properties
 
 Name | Type | Description | Notes
