@@ -6,6 +6,7 @@
 
 - Raised dependency floors to versions with published security fixes: `guzzlehttp/guzzle` `^7.15.2` (was `^7.3`) and `guzzlehttp/psr7` `^2.13.2` (was `^1.7 || ^2.0`). Guzzle remains on major version 7 and PHP `^8.1` is unchanged.
 - Updated CI actions: `actions/checkout` to `v7.0.1` and `shivammathur/setup-php` to `v2.40.0` (`eb7c497e18156a6bbabfef1d3a82760b9eda3962`).
+- Moved CI (Validate) and Release jobs from the `[self-hosted, beta, public-release]` runner label to `ubuntu-latest`. This is a public repository, so workflows must use GitHub-hosted runners rather than the internal self-hosted fleet.
 
 ## [1.0.0] - 2026-06-29
 
