@@ -2,10 +2,6 @@
 
 ## [Unreleased]
 
-### Changed
-
-- Updated CI actions: `actions/checkout` to `v7.0.1` and `shivammathur/setup-php` to `v2.40.0` (`eb7c497e18156a6bbabfef1d3a82760b9eda3962`).
-
 ## [1.0.0] - 2026-06-29
 
 Targets KOMOJU API version `2025-01-28`.
