@@ -7,14 +7,14 @@ on:
 
 jobs:
   validate:
-    runs-on: [self-hosted, beta, public-release]
+    runs-on: [self-hosted, public-release]
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
-      - uses: shivammathur/setup-php@7c071dfe9dc99bdf297fa79cb49ea005b9fcadbc  # v2.37.1, 2026-05-14
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962  # v2.40.0, 2026-10-08
         with:
           php-version: '8.2'
           tools: composer:2.9.8
@@ -23,11 +23,11 @@ jobs:
 
   release:
     needs: validate
-    runs-on: [self-hosted, beta, public-release]
+    runs-on: [self-hosted, public-release]
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       - name: Create GitHub Release
